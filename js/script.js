@@ -2,11 +2,10 @@ var responses = {0: null, 1: null, 2: null, 3:null};
 var num_responses = 0;
 
 function showResults() {
-	alert('results shown');
 	var counts = {'A': 0, 'C': 0, 'D': 0};
 
-	for(var qid = 0; qid < 4, qid++) {
-		counts[meaning[qid][responses][qid]]++;
+	for(var qid = 0; qid < 4; qid++) {
+		counts[meaning[qid][responses[qid]]]++;
 	}
 
 	var max = null;
@@ -15,8 +14,8 @@ function showResults() {
 			max = letter;
 		}
 	}
-	document.getElementId('results').style.display = 'block';
-	document.getElementId('results-text').textContent = max + ' Level!';
+	document.getElementById('result').style.display = 'block';
+	document.getElementById('result-text').textContent = max + ' Level!';
 
 	window.scrollTo(0, document.body.scrollHeight);
 }
